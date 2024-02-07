@@ -1,0 +1,37 @@
+/* Hapus gaya default checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Gaya kustom untuk checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+/* Gaya untuk tanda centang pada checkbox yang dicentang */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* Gaya untuk tanda centang pada checkbox yang dicentang */
+input[type="checkbox"]:checked + .checkmark::after {
+    content: "\2713";
+    position: absolute;
+    display: block;
+    left: 7px;
+    top: 2px;
+    color: white;
+    font-size: 20px;
+}
